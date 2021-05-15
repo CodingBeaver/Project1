@@ -1,0 +1,142 @@
+
+  #container-main{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    width:100%;
+    min-height: 90vh;
+    
+  }
+  #blue-theme2{
+      background-color:rgb(85, 205, 241);
+  }
+  #modul-background{
+      opacity:0;
+    visibility:hidden;
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    z-index:109;
+    width:100%;
+  background-color:rgba(0, 0, 0, 0.2);
+display:flex;
+justify-content:center;
+align-items:center;
+
+
+}
+  #open-img{
+    
+          position: absolute;
+          z-index:110;
+          max-width:90%;
+          max-height:90vh;
+        overflow:hidden;
+        border:30px solid rgba(0,0,0,0.6);
+    -webkit-box-shadow: 5px 5px 30px 1px rgba(0,0,0,0.6);
+  -moz-box-shadow: 5px 5px 30px 1px rgba(0,0,0,0.6);
+  box-shadow: 5px 5px 30px 1px rgba(0,0,0,0.6);
+  text-align: center;
+  display:flex;
+  
+          
+  }
+  #currentimage{
+    vertical-align: middle;
+    object-fit: cover;
+    object-position:center;
+    max-width:100vh;
+    max-height:90%;
+    
+    overflow:hidden;
+    border: 1px solid white;
+  }
+  
+  #leftarrow{
+    position:absolute;
+    top:50%;
+    left:10%;
+    z-index:200;
+  }
+  #rightarrow{
+     position:absolute;
+    top:50%;
+    right:10%;
+    z-index:200;
+    
+  }
+ #gallery{
+    margin:auto;
+    display:grid;
+    padding:50px;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    
+    grid-gap:20px;
+    justify-content:center;
+    align-items:center;
+  }
+  .gallery-item{
+      width:100%;
+      height:100%;
+      overflow: hidden;
+    
+  }
+  img.gallery-item
+     {
+     object-fit: cover;
+  
+  }
+  img.gallery-item{
+    transition: all 300ms ease-out;
+  }
+  
+  img.gallery-item:hover{
+    transform:scale(1.2);
+    cursor:pointer;
+  }
+ #modul-background button {
+      background-color:transparent;
+      border-radius:42px;
+      display:inline-block;
+      cursor:pointer;
+      color:white;
+      font-family:Arial;
+      font-size:40px;
+      font-weight:bold;
+      padding:8px 13px;
+      text-decoration:none;
+      text-shadow:0px 1px 4px #2f6627;
+    border:none;
+    transition: transform 300ms ;
+  }
+  #modul-background button:hover {
+      background-color:transparent;
+    transform:scale(1.2);
+    text-shadow:1px 3px 5px black;
+  }
+  #modul-background button:active {
+    transform:translateY(1px);
+  }
+  #background{
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    filter:blur(0px);
+    width:100%;
+    z-index:101;
+  }
+  
+  
+  
+  #modul-background.open{
+      visibility: visible;
+      opacity:1;
+      transition: opacity 600ms ease-out;
+  }
+
+  @media only screen and (max-width: 880px) {
+    #blue-theme2 nav{
+        background-color:rgb(85, 205, 241);
+    }}
